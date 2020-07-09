@@ -1,0 +1,607 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>{{'my_deliveries' | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+	<ion-list lines="none">
+		<h2>{{'pending_deliveries' | translate}}</h2>
+
+		<ion-item class="pending item_shadow" (click)="track_delivery()">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<div class="img_box">
+						<img src="assets/images/courier.png">
+					</div>
+					<div class="text_box">
+						<h3 class="d-flex">
+							<span class="item_title">Courier</span>
+							<span class="end status ion-text-end">{{'pickup_arranged' | translate}} </span>
+						</h3>
+						<p class="d-flex">
+							<span class="date_time">20 Jun 2020, 11:40 am </span>
+							<span class="end price ion-text-end"> $ 8.50 </span>
+						</p>
+					</div>
+				</div>
+				<div class="item_footer d-flex">
+					<h4>Emili Williamson</h4>
+					<h5 class="ion-text-center">
+						<span class="icon_container">
+							<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<ion-icon class="zmdi zmdi-navigation ion-text-end"></ion-icon>
+						</span>
+					</h5>
+					<h4 class="ion-text-end">Samantha Smith</h4>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item class="pending item_shadow" (click)="track_delivery()">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<div class="img_box">
+						<img src="assets/images/food.png">
+					</div>
+					<div class="text_box">
+						<h3 class="d-flex">
+							<span class="item_title">Food</span>
+							<span class="end status ion-text-end">{{'pickup_arranged' | translate}} </span>
+						</h3>
+						<p class="d-flex">
+							<span class="date_time">20 Jun 2020, 11:35 am </span>
+							<span class="end price ion-text-end"> $ 6.50 </span>
+						</p>
+					</div>
+				</div>
+				<div class="item_footer d-flex">
+					<h4>Silver Leaf Restaurant</h4>
+					<h5 class="ion-text-center">
+						<span class="icon_container">
+							<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<ion-icon class="zmdi zmdi-navigation ion-text-end"></ion-icon>
+						</span>
+					</h5>
+					<h4 class="ion-text-end">Samantha Smith</h4>
+				</div>
+			</div>
+		</ion-item>
+
+		<h2>{{'past_deliveries' | translate}}</h2>
+
+		<ion-item class="past item_shadow" (click)="track_delivery()">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<div class="img_box">
+						<img src="assets/images/grocery.png">
+					</div>
+					<div class="text_box">
+						<h3 class="d-flex">
+							<span class="item_title">Grocery</span>
+							<span class="end status ion-text-end">{{'delivered' | translate}} </span>
+						</h3>
+						<p class="d-flex">
+							<span class="date_time">18 Jun 2020,  1:48 am </span>
+							<span class="end price ion-text-end"> $ 20.50 </span>
+						</p>
+					</div>
+				</div>
+				<div class="item_footer d-flex">
+					<h4>7-11 Grocery Mart</h4>
+					<h5 class="ion-text-center">
+						<span class="icon_container">
+							<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<ion-icon class="zmdi zmdi-navigation ion-text-end"></ion-icon>
+						</span>
+					</h5>
+					<h4 class="ion-text-end">Samantha Smith</h4>
+				</div>
+			</div>
+		</ion-item>	
+		
+		
+		<ion-item class="past item_shadow" (click)="track_delivery()">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<div class="img_box">
+						<img src="assets/images/food.png">
+					</div>
+					<div class="text_box">
+						<h3 class="d-flex">
+							<span class="item_title">Food</span>
+							<span class="end status ion-text-end">{{'delivered' | translate}} </span>
+						</h3>
+						<p class="d-flex">
+							<span class="date_time">15 Jun 2020,  1:48 am </span>
+							<span class="end price ion-text-end"> $ 20.50 </span>
+						</p>
+					</div>
+				</div>
+				<div class="item_footer d-flex">
+					<h4> YoLO Fast Foods</h4>
+					<h5 class="ion-text-center">
+						<span class="icon_container">
+							<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<ion-icon class="zmdi zmdi-navigation ion-text-end"></ion-icon>
+						</span>
+					</h5>
+					<h4 class="ion-text-end">Samantha Smith</h4>
+				</div>
+			</div>
+		</ion-item>
+			<ion-item class="past item_shadow" (click)="track_delivery()">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<div class="img_box">
+						<img src="assets/images/grocery.png">
+					</div>
+					<div class="text_box">
+						<h3 class="d-flex">
+							<span class="item_title">Grocery</span>
+							<span class="end status ion-text-end">{{'delivered' | translate}} </span>
+						</h3>
+						<p class="d-flex">
+							<span class="date_time">18 Jun 2020,  1:48 am </span>
+							<span class="end price ion-text-end"> $ 20.50 </span>
+						</p>
+					</div>
+				</div>
+				<div class="item_footer d-flex">
+					<h4>7-11 Grocery Mart</h4>
+					<h5 class="ion-text-center">
+						<span class="icon_container">
+							<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<ion-icon class="zmdi zmdi-navigation ion-text-end"></ion-icon>
+						</span>
+					</h5>
+					<h4 class="ion-text-end">Samantha Smith</h4>
+				</div>
+			</div>
+		</ion-item>	
+		
+		
+		<ion-item class="past item_shadow" (click)="track_delivery()">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<div class="img_box">
+						<img src="assets/images/food.png">
+					</div>
+					<div class="text_box">
+						<h3 class="d-flex">
+							<span class="item_title">Food</span>
+							<span class="end status ion-text-end">{{'delivered' | translate}} </span>
+						</h3>
+						<p class="d-flex">
+							<span class="date_time">15 Jun 2020,  1:48 am </span>
+							<span class="end price ion-text-end"> $ 20.50 </span>
+						</p>
+					</div>
+				</div>
+				<div class="item_footer d-flex">
+					<h4> YoLO Fast Foods</h4>
+					<h5 class="ion-text-center">
+						<span class="icon_container">
+							<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<ion-icon class="zmdi zmdi-navigation ion-text-end"></ion-icon>
+						</span>
+					</h5>
+					<h4 class="ion-text-end">Samantha Smith</h4>
+				</div>
+			</div>
+		</ion-item>
+			<ion-item class="past item_shadow" (click)="track_delivery()">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<div class="img_box">
+						<img src="assets/images/grocery.png">
+					</div>
+					<div class="text_box">
+						<h3 class="d-flex">
+							<span class="item_title">Grocery</span>
+							<span class="end status ion-text-end">{{'delivered' | translate}} </span>
+						</h3>
+						<p class="d-flex">
+							<span class="date_time">18 Jun 2020,  1:48 am </span>
+							<span class="end price ion-text-end"> $ 20.50 </span>
+						</p>
+					</div>
+				</div>
+				<div class="item_footer d-flex">
+					<h4>7-11 Grocery Mart</h4>
+					<h5 class="ion-text-center">
+						<span class="icon_container">
+							<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<ion-icon class="zmdi zmdi-navigation ion-text-end"></ion-icon>
+						</span>
+					</h5>
+					<h4 class="ion-text-end">Samantha Smith</h4>
+				</div>
+			</div>
+		</ion-item>	
+		
+		
+		<ion-item class="past item_shadow" (click)="track_delivery()">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<div class="img_box">
+						<img src="assets/images/food.png">
+					</div>
+					<div class="text_box">
+						<h3 class="d-flex">
+							<span class="item_title">Food</span>
+							<span class="end status ion-text-end">{{'delivered' | translate}} </span>
+						</h3>
+						<p class="d-flex">
+							<span class="date_time">15 Jun 2020,  1:48 am </span>
+							<span class="end price ion-text-end"> $ 20.50 </span>
+						</p>
+					</div>
+				</div>
+				<div class="item_footer d-flex">
+					<h4> YoLO Fast Foods</h4>
+					<h5 class="ion-text-center">
+						<span class="icon_container">
+							<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<ion-icon class="zmdi zmdi-navigation ion-text-end"></ion-icon>
+						</span>
+					</h5>
+					<h4 class="ion-text-end">Samantha Smith</h4>
+				</div>
+			</div>
+		</ion-item>
+			<ion-item class="past item_shadow" (click)="track_delivery()">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<div class="img_box">
+						<img src="assets/images/grocery.png">
+					</div>
+					<div class="text_box">
+						<h3 class="d-flex">
+							<span class="item_title">Grocery</span>
+							<span class="end status ion-text-end">{{'delivered' | translate}} </span>
+						</h3>
+						<p class="d-flex">
+							<span class="date_time">18 Jun 2020,  1:48 am </span>
+							<span class="end price ion-text-end"> $ 20.50 </span>
+						</p>
+					</div>
+				</div>
+				<div class="item_footer d-flex">
+					<h4>7-11 Grocery Mart</h4>
+					<h5 class="ion-text-center">
+						<span class="icon_container">
+							<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<ion-icon class="zmdi zmdi-navigation ion-text-end"></ion-icon>
+						</span>
+					</h5>
+					<h4 class="ion-text-end">Samantha Smith</h4>
+				</div>
+			</div>
+		</ion-item>	
+		
+		
+		<ion-item class="past item_shadow" (click)="track_delivery()">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<div class="img_box">
+						<img src="assets/images/food.png">
+					</div>
+					<div class="text_box">
+						<h3 class="d-flex">
+							<span class="item_title">Food</span>
+							<span class="end status ion-text-end">{{'delivered' | translate}} </span>
+						</h3>
+						<p class="d-flex">
+							<span class="date_time">15 Jun 2020,  1:48 am </span>
+							<span class="end price ion-text-end"> $ 20.50 </span>
+						</p>
+					</div>
+				</div>
+				<div class="item_footer d-flex">
+					<h4> YoLO Fast Foods</h4>
+					<h5 class="ion-text-center">
+						<span class="icon_container">
+							<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<ion-icon class="zmdi zmdi-navigation ion-text-end"></ion-icon>
+						</span>
+					</h5>
+					<h4 class="ion-text-end">Samantha Smith</h4>
+				</div>
+			</div>
+		</ion-item>
+			<ion-item class="past item_shadow" (click)="track_delivery()">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<div class="img_box">
+						<img src="assets/images/grocery.png">
+					</div>
+					<div class="text_box">
+						<h3 class="d-flex">
+							<span class="item_title">Grocery</span>
+							<span class="end status ion-text-end">{{'delivered' | translate}} </span>
+						</h3>
+						<p class="d-flex">
+							<span class="date_time">18 Jun 2020,  1:48 am </span>
+							<span class="end price ion-text-end"> $ 20.50 </span>
+						</p>
+					</div>
+				</div>
+				<div class="item_footer d-flex">
+					<h4>7-11 Grocery Mart</h4>
+					<h5 class="ion-text-center">
+						<span class="icon_container">
+							<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<ion-icon class="zmdi zmdi-navigation ion-text-end"></ion-icon>
+						</span>
+					</h5>
+					<h4 class="ion-text-end">Samantha Smith</h4>
+				</div>
+			</div>
+		</ion-item>	
+		
+		
+		<ion-item class="past item_shadow" (click)="track_delivery()">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<div class="img_box">
+						<img src="assets/images/food.png">
+					</div>
+					<div class="text_box">
+						<h3 class="d-flex">
+							<span class="item_title">Food</span>
+							<span class="end status ion-text-end">{{'delivered' | translate}} </span>
+						</h3>
+						<p class="d-flex">
+							<span class="date_time">15 Jun 2020,  1:48 am </span>
+							<span class="end price ion-text-end"> $ 20.50 </span>
+						</p>
+					</div>
+				</div>
+				<div class="item_footer d-flex">
+					<h4> YoLO Fast Foods</h4>
+					<h5 class="ion-text-center">
+						<span class="icon_container">
+							<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<ion-icon class="zmdi zmdi-navigation ion-text-end"></ion-icon>
+						</span>
+					</h5>
+					<h4 class="ion-text-end">Samantha Smith</h4>
+				</div>
+			</div>
+		</ion-item>
+			<ion-item class="past item_shadow" (click)="track_delivery()">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<div class="img_box">
+						<img src="assets/images/grocery.png">
+					</div>
+					<div class="text_box">
+						<h3 class="d-flex">
+							<span class="item_title">Grocery</span>
+							<span class="end status ion-text-end">{{'delivered' | translate}} </span>
+						</h3>
+						<p class="d-flex">
+							<span class="date_time">18 Jun 2020,  1:48 am </span>
+							<span class="end price ion-text-end"> $ 20.50 </span>
+						</p>
+					</div>
+				</div>
+				<div class="item_footer d-flex">
+					<h4>7-11 Grocery Mart</h4>
+					<h5 class="ion-text-center">
+						<span class="icon_container">
+							<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<ion-icon class="zmdi zmdi-navigation ion-text-end"></ion-icon>
+						</span>
+					</h5>
+					<h4 class="ion-text-end">Samantha Smith</h4>
+				</div>
+			</div>
+		</ion-item>	
+		
+		
+		<ion-item class="past item_shadow" (click)="track_delivery()">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<div class="img_box">
+						<img src="assets/images/food.png">
+					</div>
+					<div class="text_box">
+						<h3 class="d-flex">
+							<span class="item_title">Food</span>
+							<span class="end status ion-text-end">{{'delivered' | translate}} </span>
+						</h3>
+						<p class="d-flex">
+							<span class="date_time">15 Jun 2020,  1:48 am </span>
+							<span class="end price ion-text-end"> $ 20.50 </span>
+						</p>
+					</div>
+				</div>
+				<div class="item_footer d-flex">
+					<h4> YoLO Fast Foods</h4>
+					<h5 class="ion-text-center">
+						<span class="icon_container">
+							<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<ion-icon class="zmdi zmdi-navigation ion-text-end"></ion-icon>
+						</span>
+					</h5>
+					<h4 class="ion-text-end">Samantha Smith</h4>
+				</div>
+			</div>
+		</ion-item>
+			<ion-item class="past item_shadow" (click)="track_delivery()">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<div class="img_box">
+						<img src="assets/images/grocery.png">
+					</div>
+					<div class="text_box">
+						<h3 class="d-flex">
+							<span class="item_title">Grocery</span>
+							<span class="end status ion-text-end">{{'delivered' | translate}} </span>
+						</h3>
+						<p class="d-flex">
+							<span class="date_time">18 Jun 2020,  1:48 am </span>
+							<span class="end price ion-text-end"> $ 20.50 </span>
+						</p>
+					</div>
+				</div>
+				<div class="item_footer d-flex">
+					<h4>7-11 Grocery Mart</h4>
+					<h5 class="ion-text-center">
+						<span class="icon_container">
+							<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<ion-icon class="zmdi zmdi-navigation ion-text-end"></ion-icon>
+						</span>
+					</h5>
+					<h4 class="ion-text-end">Samantha Smith</h4>
+				</div>
+			</div>
+		</ion-item>	
+		
+		
+		<ion-item class="past item_shadow" (click)="track_delivery()">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<div class="img_box">
+						<img src="assets/images/food.png">
+					</div>
+					<div class="text_box">
+						<h3 class="d-flex">
+							<span class="item_title">Food</span>
+							<span class="end status ion-text-end">{{'delivered' | translate}} </span>
+						</h3>
+						<p class="d-flex">
+							<span class="date_time">15 Jun 2020,  1:48 am </span>
+							<span class="end price ion-text-end"> $ 20.50 </span>
+						</p>
+					</div>
+				</div>
+				<div class="item_footer d-flex">
+					<h4> YoLO Fast Foods</h4>
+					<h5 class="ion-text-center">
+						<span class="icon_container">
+							<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<span class="dotted_icon"></span>
+							<ion-icon class="zmdi zmdi-navigation ion-text-end"></ion-icon>
+						</span>
+					</h5>
+					<h4 class="ion-text-end">Samantha Smith</h4>
+				</div>
+			</div>
+		</ion-item>
+		
+	</ion-list>
+</ion-content>

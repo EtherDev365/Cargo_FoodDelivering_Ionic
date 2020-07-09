@@ -1,0 +1,54 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{'courier_info' | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+	<div class="banner">
+		<h2 class="ion-text-center">{{'select_measurements' | translate}}</h2>
+		<img src="assets/images/box.png">
+		<h3 class="ion-text-end lenght">
+			<span>{{'lenght' | translate}}</span>
+			<strong> 124 cm </strong>
+		</h3>
+		<h3 class="ion-text-center width">
+			<span>{{'width' | translate}}</span>
+			<strong> 75 cm </strong>
+		</h3>
+		<h3 class="ion-text-center height">
+			<span>{{'height' | translate}}</span>
+			<strong>60 cm </strong>
+		</h3>
+	</div>
+	<ion-list lines="none">
+		<ion-item>
+			<div class="item_inner">
+				<h2 class="d-flex">{{'width' | translate}} <span class="end">75 cm</span></h2>
+				<ion-range mode="md" min="-50" max="90"></ion-range>
+				<h3 class="d-flex">0 cm <span class="end">1000 cm</span></h3>
+			</div>
+		</ion-item>
+		<ion-item>
+			<div class="item_inner">
+				<h2 class="d-flex">{{'lenght' | translate}} <span class="end">124 cm</span></h2>
+				<ion-range mode="md" min="-20" max="200"></ion-range>
+				<h3 class="d-flex">0 cm <span class="end">1000 cm</span></h3>
+			</div>
+		</ion-item>
+		<ion-item>
+			<div class="item_inner">
+				<h2 class="d-flex">{{'height' | translate}} <span class="end">60 cm</span></h2>
+				<ion-range mode="md" min="-60" max="85"></ion-range>
+				<h3 class="d-flex">0 cm <span class="end">1000 cm</span></h3>
+			</div>
+		</ion-item>
+	</ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+	<ion-button size="large"  class="btn">{{'done' | translate}}</ion-button>
+</ion-footer>

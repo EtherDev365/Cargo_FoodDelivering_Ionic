@@ -1,0 +1,526 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+:root {
+	--white: #fff;
+	--primary: #fdb915;
+	--primary-dark: #d09b1a;
+	--transparent: rgba(0, 0, 0, 0);
+	--text-light: #c2c2c2;
+	--text-dark: #747474;
+	--text-black: #0e0e0f;
+	--bg-color: #fafafa;
+	--bg-color2: #eaeaea;
+	--red_color: #ff0000;
+}
+
+.ion-page {
+	background: var(--primary) !important;
+}
+
+app-track-delivery.ion-page {
+	background: var(--white) !important;
+}
+
+app-home.ion-page {
+	background: var(--bg-color2) !important;
+}
+
+app-deliverymode.ion-page {
+	background: var(--transparent) !important;
+}
+
+ion-content {
+	border-radius: 40px 0 0 0;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.bg_color {
+	--background: var(--bg-color2);
+}
+
+.item_shadow {
+	box-shadow: 0 10px 16px -8px rgba(253, 185, 21, 0.47);
+}
+
+.d-flex {
+	display: flex !important;
+	align-items: center;
+	width: 100%;
+
+	.end {
+		margin-left: auto !important;
+		margin-right: 0 !important;
+		display: block;
+	}
+}
+
+.center_img {
+	position: relative;
+	overflow: hidden;
+
+	img {
+		&.crop_img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			bottom: 0;
+			left: -50% !important;
+			right: -50% !important;
+			margin: auto;
+		}
+	}
+}
+
+.button {
+	&.btn {
+		width: 100%;
+		font-size: 1.2rem;
+		font-weight: 400;
+		letter-spacing: 0.6px !important;
+		height: 55px;
+		--background: var(--primary);
+		text-transform: none;
+		color: var(--white);
+		margin: 0;
+		--box-shadow: none;
+		padding: 0;
+
+		ion-icon {
+			font-size: 1.4rem;
+		}
+
+		&:hover:not(.disable-hover) {
+			--background: var(--primary);
+		}
+
+		&.button-outline {
+			--background: var(--transparent);
+			color: var(--primary);
+			--border-color: var(--primary);
+			--border-width: 1px;
+			letter-spacing: 0 !important;
+			font-size: 1.2rem !important;
+			font-weight: 600 !important;
+
+			&:hover:not(.disable-hover) {
+				--background: var(--transparent);
+			}
+		}
+
+		&.button-round {
+			--border-radius: 50px !important;
+		}
+
+		&.button-block {
+			--border-radius: 4px !important;
+		}
+	}
+}
+
+ion-header {
+	z-index: 999;
+
+	&::after {
+		display: none !important;
+	}
+
+	ion-toolbar {
+		--background: var(--transparent);
+		display: flex;
+		align-items: center;
+		min-height: 60px !important;
+		height: auto;
+		overflow: visible !important;
+		--border-width: 0 !important;
+
+		ion-buttons {
+			position: relative !important;
+			margin: 0;
+			--padding-end: 0 !important;
+			--padding-start: 0 !important;
+
+			ion-back-button {
+				--color: var(--white) !important;
+				--icon-font-size: 2.3rem !important;
+				--padding-end: 0 !important;
+			}
+
+			&.ios {
+				padding: 0 10px !important;
+			}
+		}
+
+		ion-title {
+			color: var(--white);
+			padding: 0 15px !important;
+			text-align: justify;
+			font-size: 1.4rem;
+			font-weight: 500;
+			display: flex;
+			align-items: center;
+			position: relative !important;
+			overflow: visible !important;
+			line-height: 60px;
+
+			.end {
+				margin-right: 0;
+				margin-left: auto;
+				display: block;
+			}
+		}
+	}
+
+	&.bg_transparent {
+		//position: absolute;
+		z-index: 999;
+		width: 100%;
+		height: auto;
+
+		ion-toolbar {
+			--background: transparent;
+			--ion-color-base: transparent !important;
+		}
+	}
+}
+
+.form {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+	width: calc(100% - 40px);
+
+	ion-list {
+		background: var(--transparent) !important;
+		margin: 0;
+		padding: 0;
+	}
+
+	ion-item {
+		padding: 0 0 8px 0;
+		min-height: unset !important;
+		box-shadow: none !important;
+		--background: var(--transparent);
+		background: var(--transparent);
+		align-items: flex-start;
+		--inner-padding-end: 0px;
+		--inner-min-height: unset !important;
+		--padding-start: 0;
+		--highligh-color-focused: var(--transparent) !important;
+		box-shadow: none !important;
+		--min-height: unset;
+		border-bottom: 1px solid #ccc !important;
+		margin-bottom: 35px;
+
+		.item_inner {
+			width: 100%;
+		}
+
+		ion-label {
+			color: var(--text-black) !important;
+			margin: 0;
+			letter-spacing: 0;
+			max-width: 100% !important;
+			min-width: 100% !important;
+			width: 100% !important;
+			-webkit-box-flex: unset !important;
+			flex: unset !important;
+			font-weight: 700 !important;
+			font-size: 1.35rem !important;
+			padding-bottom: 13px;
+		}
+
+		ion-textarea,
+		ion-input {
+			--padding: 0 !important;
+			font-size: 1.2rem !important;
+			font-weight: 400 !important;
+			letter-spacing: 0.5px;
+			--padding-start: 0 !important;
+			--padding-end: 0 !important;
+			--padding-top: 0 !important;
+			--padding-bottom: 0px !important;
+			color: var(--text-black);
+			--placeholder-color: var(--text-light) !important;
+			--placeholder-opacity: 1;
+			--placeholder-font-weight: 400 !important;
+			flex: unset !important;
+			min-width: 100%;
+			height: 100%;
+
+			input {
+				--padding: var(--no-padding);
+
+				&.native-input {
+					--padding: var(--no-padding);
+				}
+			}
+		}
+
+		&.item-select {
+			ion-select {
+				width: 100%;
+				max-width: unset;
+				letter-spacing: 0.5px;
+				padding: 0;
+				font-size: 1.2rem !important;
+				font-weight: 400 !important;
+				--placeholder-color: var(--text-light) !important;
+				--placeholder-opacity: 1;
+				--placeholder-font-weight: 400 !important;
+			}
+		}
+	}
+
+	ion-row {
+		margin: 0 -5px;
+	}
+}
+
+ion-modal {
+	--background: rgba(0, 0, 0, 0) !important;
+	--backdrop-opacity: var(--ion-backdrop-opacity, 0.3) !important;
+}
+
+app-add-address,
+app-home {
+	ion-searchbar {
+		.searchbar-input-container {
+			input {
+				box-shadow: none !important;
+				padding: 0 !important;
+				font-size: 1rem !important;
+				font-weight: 400 !important;
+			}
+		}
+	}
+}
+
+app-saved-addresses,
+app-search-grocery-stores,
+app-search-restaurant,
+app-arrange-delivery {
+	ion-searchbar {
+		.searchbar-input-container {
+			input {
+				box-shadow: none !important;
+				padding: 0 !important;
+				font-size: 1.1rem !important;
+				font-weight: 500 !important;
+			}
+		}
+	}
+}
+
+.action-sheet-wrapper {
+	.action-sheet-group {
+		border-radius: 33px 0 0 0;
+		overflow: hidden;
+		max-height: 350px;
+		overflow: hidden;
+		overflow-y: auto;
+
+		.action-sheet-button {
+			padding: 0 37px;
+			font-size: 1.3rem;
+			font-weight: 500;
+
+			.action-sheet-button-inner {
+				text-align: center;
+				display: block;
+				line-height: 53px;
+			}
+
+			&.action-sheet-selected {
+				color: var(--primary) !important;
+				font-size: 1.5rem;
+			}
+		}
+
+		&.action-sheet-group-cancel {
+			padding-top: 17px;
+			background: var(--white);
+			border-radius: 0 !important;
+
+			.action-sheet-button {
+				background: var(--primary);
+				border-radius: 50px 0;
+				color: var(--white);
+			}
+		}
+	}
+}
+
+ion-app[dir="rtl"] {
+	.d-flex .end {
+		margin-left: 0 !important;
+		margin-right: auto !important;
+	}
+
+	ion-content {
+		border-radius: 0px 40px 0 0;
+	}
+
+	app-sign-in {
+		ion-footer .button.btn.facebook {
+			--border-radius: 0px 33px 0 0 !important;
+		}
+	}
+
+	app-my-profile ion-content::before,
+	app-sign-up ion-content::before {
+		border-radius: 0px 33px 0 0 !important;
+	}
+
+	app-change-language,
+	app-contact-us,
+	app-verification,
+	app-sign-up {
+		ion-footer .button.btn {
+			--border-radius: 0px 33px 0 0 !important;
+		}
+	}
+
+	app-more ion-header .profile_box .img_box {
+		margin-right: 0px !important;
+		margin-left: 15px;
+	}
+
+	app-my-deliveries ion-list ion-item .item_inner .item_header .img_box {
+		margin-right: 0px !important;
+		margin-left: 10px !important;
+	}
+
+	app-track-delivery {
+		ion-header ion-item .item_inner .item_header .img_box {
+			margin-right: 0px !important;
+			margin-left: 10px !important;
+		}
+
+		ion-content ion-list ion-item.location_detail .address_container .address::before,
+		ion-content ion-list ion-item.location_detail .address_container .address::after {
+			left: unset !important;
+			right: 5px !important;
+		}
+	}
+
+	app-home {
+		ion-list ion-item .item_inner .img_box {
+			margin-right: 0px !important;
+			margin-left: 23px;
+		}
+
+		.promotional_ads .scroll_container .item_scroll {
+			&:first-child {
+				margin-left: 3.5px !important;
+				margin-right: 10px !important;
+			}
+
+			&:last-child {
+				margin-right: 3.5px !important;
+				margin-left: 10px !important;
+			}
+		}
+	}
+
+	app-height-weight-lenght,
+	app-payment {
+		ion-list ion-item ion-radio {
+			margin-right: 0px !important;
+			margin-left: 20px !important;
+		}
+
+		ion-footer .button.btn {
+			--border-radius: 33px 0px 0 0 !important;
+		}
+	}
+
+	app-deliverymode {
+		ion-footer {
+			border-radius: 0px 33px 0 0 !important;
+
+			ion-list ion-item ion-radio {
+				margin-right: 0px !important;
+				margin-left: 20px !important;
+			}
+
+			.button.btn {
+				--border-radius: 33px 0px 0 0 !important;
+			}
+		}
+	}
+
+	app-saved-addresses,
+	app-search-grocery-stores,
+	app-search-restaurant,
+	app-arrange-delivery {
+		.tab_btn_container ion-segment {
+			left: unset !important;
+			right: 0 !important;
+		}
+
+		.tab_container {
+			border-radius: 00px 33px 0 0;
+			margin-right: auto !important;
+			margin-left: 0 !important;
+		}
+
+		.tab_container .content.confirm_info ion-list ion-card.address_container .address::before,
+		.tab_container .content.confirm_info ion-list ion-card.address_container .address::after {
+			left: 0px !important;
+			right: 5px !important;
+		}
+	}
+
+	app-pickup-assigned {
+		.button.btn {
+			&.back_to_home {
+				--border-radius: 0px 0 33px 0 !important;
+			}
+
+			&.track_my_courier {
+				--border-radius: 33px 0 0px 0 !important;
+			}
+		}
+	}
+
+	app-search-grocery-stores,
+	app-search-restaurant {
+		.tab_container .content.food_info ion-card.form.add_items ion-item::after {
+			right: unset !important;
+			left: 74px !important;
+		}
+	}
+
+	app-more .buy_this_app {
+		right: unset;
+		left: 20px !important;
+	}
+}

@@ -1,0 +1,57 @@
+<ion-header>
+	<!--
+  <ion-toolbar>
+    <ion-title>{{'enter_phone_number' | translate}}</ion-title>
+  </ion-toolbar>
+-->
+
+	<div class="logo_box">
+		<img src="assets/images/logo.png">
+	</div>
+</ion-header>
+
+<ion-content>
+	<div class="form">
+		<h2 class="ion-text-center">{{'sign_in_with_phone_number' | translate}}</h2>
+		<ion-list lines="none">
+			<ion-item lines="none">
+				<div class="item_inner">
+					<ion-label position="fixed">{{'select_country' | translate}}</ion-label>
+					<ion-select mode="md" placeholder="{{'select_country_from_list' | translate}}" interface="action-sheet">
+						<ion-select-option value="1">Brazil</ion-select-option>
+						<ion-select-option value="2">India</ion-select-option>
+						<ion-select-option value="3">Ireland</ion-select-option>
+						<ion-select-option value="4">Japan</ion-select-option>
+						<ion-select-option value="5">Kenya</ion-select-option>
+						<ion-select-option value="6">Latvia</ion-select-option>
+						<ion-select-option value="7">Martinique</ion-select-option>
+						<ion-select-option value="8">Mexico</ion-select-option>
+						<ion-select-option value="9">Monaco</ion-select-option>
+						<ion-select-option value="10">Nepal</ion-select-option>
+					</ion-select>
+				</div> 
+			</ion-item>
+			<ion-item lines="none">
+				<div class="item_inner">
+					<ion-label position="fixed">{{'phone_number' | translate}}</ion-label>
+					<ion-input type="number" value="" placeholder="{{'enter_phone_number' | translate}}"></ion-input>
+				</div>
+			</ion-item>
+		</ion-list>
+	</div>
+	<ion-button size="large" shape="block" class="btn continue" (click)="continue()">{{'continue' | translate}}</ion-button>
+	<h3 class="ion-text-center">{{'we_will_send_otp_for_verfication' | translate}}</h3>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+<h2 class="ion-text-center">{{'or_continue_with' | translate}}</h2>
+	<ion-row>
+		<ion-col size="6" class="ion-no-padding">
+			<ion-button size="large"   class="btn facebook" (click)="tabs()">{{'facebook' | translate}}</ion-button>
+		</ion-col>
+		
+		<ion-col size="6" class="ion-no-padding">
+			<ion-button size="large"   class="btn google" (click)="tabs()">{{'google' | translate}}</ion-button>
+		</ion-col>
+	</ion-row>
+</ion-footer>

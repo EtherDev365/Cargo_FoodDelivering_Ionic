@@ -1,0 +1,123 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title></ion-title>
+	</ion-toolbar>
+	<ion-item lines="none" class="pending">
+		<div class="item_inner">
+			<div class="item_header d-flex">
+				<div class="img_box">
+					<img src="assets/images/courier.png">
+				</div>
+				<div class="text_box">
+					<h3 class="d-flex">
+						<span class="item_title">Courier</span>
+						<span class="end status ion-text-end">{{'pickup_arranged' | translate}} </span>
+					</h3>
+					<p class="d-flex">
+						<span class="date_time">20 Jun 2020, 11:40 am </span>
+						<span class="end price ion-text-end"> $ 8.50 </span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</ion-item>
+</ion-header>
+
+<ion-content>
+	<div class="map">
+		<img src="assets/images/map.png">
+		<ion-icon class="zmdi zmdi-pin ion-text-center location" style="top: 26%; left: 15%"></ion-icon>
+		<ion-icon class="zmdi zmdi-navigation ion-text-center location" style="top: 43%; left:54%"></ion-icon>
+
+		<ion-icon class="zmdi zmdi-bike ion-text-center courier_boy" style="top: 14%; left: 13%"></ion-icon>
+	</div>
+
+
+	<ion-list lines="none" [ngClass]="fabAction ? 'active' : ''">
+		<ion-item class="item_shadow delivermam_info">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/images/2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2>James Haydon</h2>
+					<p>Deliveryman</p>
+				</div>
+				<ion-icon class="zmdi zmdi-phone ion-text-center end"></ion-icon>
+			</div>
+		</ion-item>
+
+		<ion-item class="item_shadow location_detail">
+			<div class="item_inner d-flex">
+				<div class="address_container">
+					<div class="address d-flex">
+						<ion-icon class="zmdi zmdi-pin ion-text-start" ></ion-icon>
+						<div class="text">
+							<h2>Walmart</h2>
+							<h3>Emili Williamson</h3>
+							<p>128 Mott St, New York, NY 10013, United States</p>
+						</div>
+					</div>
+
+					<div class="address d-flex">
+						<ion-icon class="zmdi zmdi-navigation ion-text-start"></ion-icon>
+						<div class="text">
+							<h2>City Garden</h2>
+							<h3>Samantha Smith</h3>
+							<p>2210 St. Merry Church,New York NY 10013, United States</p>
+						</div>
+					</div>
+				</div>
+				<ion-icon class="zmdi zmdi-chevron-up end ion-text-center" (click)="toggleFab()"></ion-icon>
+			</div>
+		</ion-item>
+
+		<ion-item class="item_shadow courier_info">
+			<div class="item_inner">
+				<ion-row>
+					<ion-col size="8">
+						<h2>{{'courier_type' | translate}}</h2>
+						<h3>Box Courier</h3>
+					</ion-col>
+					<ion-col size="4">
+						<h2>{{'frangible' | translate}}</h2>
+						<h3>Yes</h3>
+					</ion-col>
+				</ion-row>
+
+				<ion-row>
+					<ion-col size="8">
+						<h2>{{'height_weight_length' | translate}}</h2>
+						<h3>60 x 75 x 124 (cm)</h3>
+					</ion-col>
+					<ion-col size="4">
+						<h2>{{'weight' | translate}}</h2>
+						<h3>10 kg</h3>
+					</ion-col>
+				</ion-row>
+
+				<ion-row>
+					<ion-col size="12">
+						<h2>{{'courier_infp' | translate}}</h2>
+						<h3>Birthday Gift containing flower Vaas.<br> Carry carefully as it is frangible.</h3>
+					</ion-col>
+				</ion-row>
+			</div>
+		</ion-item>
+
+		<ion-item class="item_shadow courier_info payment_info">
+			<div class="item_inner">
+				<ion-row>
+					<ion-col size="12">
+						<h3 class="d-flex">Economy Delivery <span class="end ion-text-end">$8.60</span></h3>
+						<h2>Payment via Cash on Pickup</h2>
+					</ion-col> 
+				</ion-row>
+			</div>
+		</ion-item>
+	
+	</ion-list>
+</ion-content>

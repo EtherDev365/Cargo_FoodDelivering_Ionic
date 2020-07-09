@@ -1,0 +1,155 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			{{'saved_addresses' | translate}}
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="tab_btn_container">
+		<ion-segment [(ngModel)]="tab" scrollable lines="none" mode="md">
+			<ion-segment-button value="home">
+				<h2>
+					<ion-icon class="zmdi zmdi-home"></ion-icon>
+				</h2>
+			</ion-segment-button>
+			<ion-segment-button value="office">
+				<h2>
+					<ion-icon class="zmdi zmdi-city"></ion-icon>
+				</h2>
+			</ion-segment-button>
+			<ion-segment-button value="other">
+				<h2>
+					<ion-icon class="zmdi zmdi-city-alt"></ion-icon>
+				</h2>
+			</ion-segment-button>
+		</ion-segment>
+	</div>
+
+	<div class="tab_container" [ngSwitch]="tab"> 
+		<div class="content" *ngSwitchCase="'home'">
+			<div class="map" (click)="toggleFab()">
+				<img src="assets/images/map.png">
+				<ion-icon class="zmdi zmdi-pin" style="top: 28%; left: 40%;"></ion-icon>
+			</div>
+
+			<div class="search_box d-flex item_shadow">
+				<ion-icon class="zmdi zmdi-home ion-text-start"></ion-icon>
+				<ion-searchbar class="ion-no-padding" clear-icon="undefined" searchIcon="hide" value="Home"></ion-searchbar>
+				<ion-icon class="zmdi zmdi-search ion-text-end"></ion-icon>
+			</div>
+
+			<div class="form" [ngClass]="fabAction ? 'active' : ''">
+				<ion-list lines="none">
+					<div class="list_header d-flex">
+						<ion-icon class="zmdi zmdi-navigation"></ion-icon>
+						<p>128 Mott St, New York, NY 10013, <br> United States</p>
+					</div>
+					<ion-item lines="none">
+						<ion-icon class="zmdi zmdi-pin-assistant ion-text-start" slot="start"></ion-icon>
+						<ion-input type="text" value="City Garden"></ion-input>
+					</ion-item>
+					<ion-item lines="none">
+						<ion-icon class="zmdi zmdi-account" slot="start"></ion-icon>
+						<ion-input type="name" value="Sam Smith"></ion-input>
+						<ion-icon class="zmdi zmdi-accounts-list-alt ion-text-end" slot="end"></ion-icon>
+					</ion-item>
+					<ion-item lines="none">
+						<ion-icon class="zmdi zmdi-phone" slot="start"></ion-icon>
+						<ion-input type="name" value="987 7654 321"></ion-input>
+					</ion-item>
+				</ion-list>
+				<div class="btn_container d-flex">
+					<ion-button size="large" shape="round" class="btn end">
+						{{'save_address' | translate}}
+					</ion-button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="content" *ngSwitchCase="'office'">
+			<div class="map" (click)="toggleFab2()">
+				<img src="assets/images/map.png">
+				<ion-icon class="zmdi zmdi-pin" style="top: 38%; left: 50%;"></ion-icon>
+			</div>
+
+			<div class="search_box d-flex item_shadow">
+				<ion-icon class="zmdi zmdi-home ion-text-start"></ion-icon>
+				<ion-searchbar class="ion-no-padding" clear-icon="undefined" searchIcon="hide" value="Office"></ion-searchbar>
+				<ion-icon class="zmdi zmdi-search ion-text-end"></ion-icon>
+			</div>
+
+			<div class="form" [ngClass]="fabAction2 ? 'active' : ''">
+				<ion-list lines="none">
+					<div class="list_header d-flex">
+						<ion-icon class="zmdi zmdi-navigation"></ion-icon>
+						<p>128 Mott St, New York, NY 10013, <br> United States</p>
+					</div>
+					<ion-item lines="none">
+						<ion-icon class="zmdi zmdi-pin-assistant ion-text-start" slot="start"></ion-icon>
+						<ion-input type="text" value="Walmart Campus"></ion-input>
+					</ion-item>
+					<ion-item lines="none">
+						<ion-icon class="zmdi zmdi-account" slot="start"></ion-icon>
+						<ion-input type="name" value="Sam Smith"></ion-input>
+						<ion-icon class="zmdi zmdi-accounts-list-alt ion-text-end" slot="end"></ion-icon>
+					</ion-item>
+					<ion-item lines="none">
+						<ion-icon class="zmdi zmdi-phone" slot="start"></ion-icon>
+						<ion-input type="name" value="987 7654 321"></ion-input>
+					</ion-item>
+				</ion-list>
+				<div class="btn_container d-flex">
+					<ion-button size="large" shape="round" class="btn end">
+						{{'save_address' | translate}}
+					</ion-button>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="content" *ngSwitchCase="'other'">
+			<div class="map" (click)="toggleFab3()">
+				<img src="assets/images/map.png">
+				<ion-icon class="zmdi zmdi-pin" style="top: 50%; left: 40%;"></ion-icon>
+			</div>
+
+			<div class="search_box d-flex item_shadow">
+				<ion-icon class="zmdi zmdi-home ion-text-start"></ion-icon>
+				<ion-searchbar class="ion-no-padding" clear-icon="undefined" searchIcon="hide" value="Other"></ion-searchbar>
+				<ion-icon class="zmdi zmdi-search ion-text-end"></ion-icon>
+			</div>
+
+			<div class="form" [ngClass]="fabAction3 ? 'active' : ''">
+				<ion-list lines="none">
+					<div class="list_header d-flex">
+						<ion-icon class="zmdi zmdi-navigation"></ion-icon>
+						<p>128 Mott St, New York, NY 10013, <br> United States</p>
+					</div>
+					<ion-item lines="none">
+						<ion-icon class="zmdi zmdi-pin-assistant ion-text-start" slot="start"></ion-icon>
+						<ion-input type="text" value="Golden Point"></ion-input>
+					</ion-item>
+					<ion-item lines="none">
+						<ion-icon class="zmdi zmdi-account" slot="start"></ion-icon>
+						<ion-input type="name" value="Sam Smith"></ion-input>
+						<ion-icon class="zmdi zmdi-accounts-list-alt ion-text-end" slot="end"></ion-icon>
+					</ion-item>
+					<ion-item lines="none">
+						<ion-icon class="zmdi zmdi-phone" slot="start"></ion-icon>
+						<ion-input type="name" value="987 7654 321"></ion-input>
+					</ion-item>
+				</ion-list>
+				<div class="btn_container d-flex">
+					<ion-button size="large" shape="round" class="btn end">
+						{{'save_address' | translate}}
+					</ion-button>
+				</div>
+			</div>
+		</div>
+	</div>
+</ion-content>

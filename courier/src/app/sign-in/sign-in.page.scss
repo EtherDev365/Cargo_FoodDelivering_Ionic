@@ -1,0 +1,64 @@
+.logo_box {
+	position: relative;
+	overflow: hidden;
+	min-height: 220px;
+
+	img {
+		width: 190px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: block;
+		margin: auto;
+
+	}
+}
+
+.form {
+	padding-top: 30px;
+
+	h2 {
+		margin: 0;
+		color: var(--text-dark);
+		font-size: 1.4rem;
+		padding-bottom: 52px;
+	}
+
+}
+
+.button.btn.button-block.continue {
+	--border-radius: 33px 0 !important;
+}
+
+h3 {
+	margin: 0;
+	color: var(--text-light);
+	font-weight: 400;
+	font-size: 1rem;
+	padding-top: 13px;
+}
+
+ion-footer {
+	background: var(--white);
+
+	h2 {
+		margin: 0;
+		color: var(--text-dark);
+		font-size: 1.35rem;
+		padding-bottom: 40px;
+	}
+
+	.button.btn {
+		--border-radius: 0;
+
+		&.facebook {
+			--background: #3b45c1;
+			--border-radius: 33px 0 0 0;
+		}
+		&.google {
+			--background: #ff452c; 
+		}
+	}
+}

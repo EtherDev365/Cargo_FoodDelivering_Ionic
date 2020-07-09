@@ -1,0 +1,33 @@
+ion-header {
+	h1 {
+		padding: 6px 23px 35px 23px;
+		color: var(--white);
+		margin: 0;
+		font-size: 1.6rem;
+	}
+
+}
+
+.form {
+	padding-top: 30px;
+
+	h2 {
+		margin: 0;
+		font-size: 1.42rem;
+		font-weight: 500;
+		line-height: 24px;
+		padding-bottom: 47px;
+	}
+
+	ion-item {
+		margin-bottom: 45px;
+	}
+}
+
+ion-footer {
+	background: var(--white);
+
+	.button.btn {
+		--border-radius: 33px 0 0 0;
+	}
+}

@@ -1,0 +1,39 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title></ion-title>
+	</ion-toolbar>
+	<h1>{{'contact_us' | translate}}</h1>
+</ion-header>
+
+<ion-content>
+	<div class="form">
+		<h2>{{'contact_us_text' | translate}}</h2>
+		<ion-list lines="none">
+			<ion-item lines="none">
+				<div class="item_inner">
+					<ion-label position="fixed">{{'full_name' | translate}}</ion-label>
+					<ion-input type="name" value="" placeholder="{{'enter_full_name' | translate}}"></ion-input>
+				</div>
+			</ion-item>
+			<ion-item lines="none">
+				<div class="item_inner">
+					<ion-label position="fixed">{{'phone_number' | translate}}</ion-label>
+					<ion-input type="number" value="" placeholder="{{'enter_phone_number' | translate}}"></ion-input>
+				</div>
+			</ion-item>
+
+			<ion-item lines="none">
+				<div class="item_inner">
+					<ion-label position="fixed">{{'your_message' | translate}}</ion-label>
+					<ion-textarea rows="1" type="text" placeholder="{{'enter_your_message' | translate}}"></ion-textarea>
+				</div>
+			</ion-item>
+		</ion-list>
+	</div>
+</ion-content>
+<ion-footer class="ion-no-border">
+	<ion-button size="large" class="btn">{{'send_message' | translate}}</ion-button>
+</ion-footer>

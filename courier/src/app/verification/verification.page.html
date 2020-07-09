@@ -1,0 +1,28 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{'verification' | translate}}</ion-title>
+	</ion-toolbar>
+	<div class="text_box">
+		<p>{{'verification_text' | translate}}</p>
+		<h2 class="d-flex">2:23 min <span class="end">{{'resend' | translate}}</span></h2>
+	</div>
+</ion-header>
+
+<ion-content>
+	<div class="form">
+		<ion-list lines="none">
+			<ion-item lines="none">
+				<div class="item_inner">
+					<ion-label position="fixed">{{'enter_otp' | translate}}</ion-label>
+					<ion-input type="name" value="" placeholder="{{'enter_6_digit_code' | translate}}"></ion-input>
+				</div>
+			</ion-item>
+		</ion-list>
+	</div>
+</ion-content>
+<ion-footer class="ion-no-border">
+	<ion-button size="large"   class="btn" (click)="submit()">{{'submit' | translate}}</ion-button>
+</ion-footer>

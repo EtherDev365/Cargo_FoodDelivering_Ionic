@@ -1,0 +1,40 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{'my_profile' | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="profile_container d-flex"> 
+		<div class="img_box center_img">
+			<img src="assets/images/profile.png" class="crop_img"> 
+		</div> 
+	</div>
+	<div class="form">
+		<ion-list lines="none">
+			<ion-item lines="none">
+				<div class="item_inner">
+					<ion-label position="fixed">{{'full_name' | translate}}</ion-label>
+					<ion-input type="name" value="Samantha Smith" readonly></ion-input>
+				</div>
+			</ion-item>
+
+			<ion-item lines="none">
+				<div class="item_inner">
+					<ion-label position="fixed">{{'email_address' | translate}}</ion-label>
+					<ion-input type="enail" value="samanthasmith@mail.com" readonly></ion-input>
+				</div>
+			</ion-item> 
+			<ion-item lines="none">
+				<div class="item_inner">
+					<ion-label position="fixed">{{'phone_number' | translate}}</ion-label>
+					<ion-input type="text" value="+1 987 654 3210" readonly></ion-input>
+				</div>
+			</ion-item>
+		</ion-list>
+	</div>
+</ion-content>
+ 

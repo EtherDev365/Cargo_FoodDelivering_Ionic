@@ -1,0 +1,41 @@
+ion-header ion-toolbar ion-title {
+	position: absolute!important;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.56rem;
+	font-weight: 500;
+	padding: 0 15px !important;
+}
+
+ion-content {
+	border-radius: 0 !important;
+	--background: var(--transparent) !important;
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 60px);
+		background: var(--white);
+		border-radius: 33px 0 0 0;
+	}
+}
+
+.profile_container {
+	padding: 22px 20px;
+	margin-bottom: 45px; 
+
+	.img_box {
+		min-width: 115px;
+		height: 115px;
+		background: var(--bg-color);
+		border-radius: 50%;
+		margin: 0 auto;
+	}
+}
+
+ 

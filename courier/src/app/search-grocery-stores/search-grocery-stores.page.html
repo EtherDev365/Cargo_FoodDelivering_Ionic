@@ -1,0 +1,362 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			<span *ngIf="tab == 'pickup_location'">{{'search_grocery_store' | translate}}</span>
+			<span *ngIf="tab == 'drop_location'">{{'drop_location' | translate}}</span>
+			<span *ngIf="tab == 'food_info'">{{'grocery_items' | translate}}</span>
+			<span *ngIf="tab == 'confirm'">{{'confirm_info' | translate}}</span>
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="tab_btn_container">
+		<ion-segment [(ngModel)]="tab" scrollable lines="none" mode="md">
+			<ion-segment-button value="pickup_location">
+				<h2>
+					<ion-icon class="zmdi zmdi-store"></ion-icon>
+				</h2>
+			</ion-segment-button>
+			<ion-segment-button value="drop_location">
+				<h2>
+					<ion-icon class="zmdi zmdi-navigation"></ion-icon>
+				</h2>
+			</ion-segment-button>
+			<ion-segment-button value="food_info">
+				<h2>
+					<ion-icon class="zmdi zmdi-shopping-basket"></ion-icon>
+				</h2>
+			</ion-segment-button>
+			<ion-segment-button value="confirm">
+				<h2>
+					<ion-icon class="zmdi zmdi-assignment"></ion-icon>
+				</h2>
+			</ion-segment-button>
+		</ion-segment>
+	</div>
+
+
+
+	<!--	 Tab Content start -->
+	<div class="tab_container" [ngSwitch]="tab">
+
+		<!--	Pickup Location section start -->
+		<div class="content pickup_location" *ngSwitchCase="'pickup_location'">
+			<div class="map">
+				<img src="assets/images/map.png">
+
+				<div class="restaurant_location" style="top: 20%;left: 30%" (click)="toggleFab()">
+					<img src="assets/images/grocery_location_icon.png">
+				</div>
+				<div class="restaurant_location" style="top: 50%;left: 81%" (click)="toggleFab()">
+					<img src="assets/images/grocery_location_icon.png">
+				</div>
+				<div class="restaurant_location" style="top: 43%;left: 90%" (click)="toggleFab()">
+					<img src="assets/images/grocery_location_icon.png">
+				</div>
+				<div class="restaurant_location" style="top: 29%;left: 30%" (click)="toggleFab()">
+					<img src="assets/images/grocery_location_icon.png">
+				</div>
+				<div class="restaurant_location" style="top: 39%;left: 44%" (click)="toggleFab()">
+					<img src="assets/images/grocery_location_icon.png">
+				</div>
+				<div class="restaurant_location" style="top: 43%;left: 75%" (click)="toggleFab()">
+					<img src="assets/images/grocery_location_icon.png">
+				</div>
+				<div class="restaurant_location" style="top: 54%;left: 19%" (click)="toggleFab()">
+					<img src="assets/images/grocery_location_icon.png">
+				</div>
+				<div class="restaurant_location" style="top: 66%;left: 51%" (click)="toggleFab()">
+					<img src="assets/images/grocery_location_icon.png">
+				</div>
+				<div class="restaurant_location" style="top: 76%;left: 65%" (click)="toggleFab()">
+					<img src="assets/images/grocery_location_icon.png">
+				</div>
+				<div class="restaurant_location" style="top: 85%;left: 18%" (click)="toggleFab()">
+					<img src="assets/images/grocery_location_icon.png">
+				</div>
+			</div>
+
+			<div class="your_location" style="top: 51%; left: 40%;">
+				<ion-icon class="zmdi zmdi-circle"></ion-icon>
+			</div>
+			<div class="search_box d-flex item_shadow">
+				<ion-icon class="zmdi zmdi-store ion-text-start"></ion-icon>
+				<ion-searchbar class="ion-no-padding" clear-icon="undefined" searchIcon="hide" placeholder="{{'search_grocery_store' | translate}}"></ion-searchbar>
+			</div>
+
+
+			<div class="search_option">
+				<ion-card class="item_shadow">
+					<h2>{{'recent_searches' | translate}}</h2>
+					<h3 class="d-flex" (click)="toggleFab()">
+						<ion-icon class="zmdi zmdi-time-restore"></ion-icon>
+						7-11 Grocery Mart
+					</h3>
+					<h3 class="d-flex" (click)="toggleFab()">
+						<ion-icon class="zmdi zmdi-time-restore"></ion-icon>
+						Super Mart
+					</h3>
+					<h3 class="d-flex" (click)="toggleFab()">
+						<ion-icon class="zmdi zmdi-time-restore"></ion-icon>
+						Food Mart
+					</h3>
+
+				</ion-card>
+			</div>
+			<div class="form" [ngClass]="fabAction ? 'active' : ''">
+				<ion-list lines="none">
+					<div class="list_header d-flex">
+						<ion-icon class="zmdi zmdi-pin"></ion-icon>
+						<p>128 Mott St, New York, NY 10013, <br> United States</p>
+					</div>
+					<ion-item lines="none">
+						<ion-icon class="zmdi zmdi-pizza ion-text-start" slot="start"></ion-icon>
+						<ion-input type="text" value="7-11 Grocery Mart" readonly></ion-input>
+					</ion-item>
+					<ion-item lines="none">
+						<ion-icon class="zmdi zmdi-phone" slot="start"></ion-icon>
+						<ion-input type="name" value="987 7654 321" readonly></ion-input>
+					</ion-item>
+				</ion-list>
+				<div class="btn_container d-flex">
+					<ion-button size="large" shape="round" class="btn end">
+						{{'continue' | translate}}
+						<ion-icon class="zmdi zmdi-long-arrow-down ion-text-end"></ion-icon>
+					</ion-button>
+				</div>
+			</div>
+		</div>
+		<!--	Pickup Location section end -->
+
+
+		<!--	Drop Location section start -->
+		<div class="content" *ngSwitchCase="'drop_location'">
+			<div class="map">
+				<img src="assets/images/map.png">
+			</div>
+
+
+			<div class="search_box d-flex item_shadow">
+				<ion-icon class="zmdi zmdi-navigation ion-text-start"></ion-icon>
+				<ion-searchbar class="ion-no-padding" clear-icon="undefined" searchIcon="hide" placeholder="{{'enter_drop_location' | translate}}"></ion-searchbar>
+			</div>
+
+
+			<div class="search_option">
+				<ion-card class="item_shadow">
+					<h2>{{'saved_addresses' | translate}}</h2>
+					<h3 class="d-flex" (click)="toggleFab2()">
+						<ion-icon class="zmdi zmdi-home"></ion-icon>
+						Home
+					</h3>
+					<h3 class="d-flex" (click)="toggleFab2()">
+						<ion-icon class="zmdi zmdi-city"></ion-icon>
+						Office
+					</h3>
+					<h3 class="d-flex" (click)="toggleFab2()">
+						<ion-icon class="zmdi zmdi-city-alt"></ion-icon>
+						Other
+					</h3>
+				</ion-card>
+
+
+				<ion-card class="item_shadow">
+					<h2>{{'recent_searches' | translate}}</h2>
+					<h3 class="d-flex" (click)="toggleFab2()">
+						<ion-icon class="zmdi zmdi-time-restore"></ion-icon>
+						City Centerl
+					</h3>
+					<h3 class="d-flex" (click)="toggleFab2()">
+						<ion-icon class="zmdi zmdi-time-restore"></ion-icon>
+						Walmart Campus
+					</h3>
+					<h3 class="d-flex" (click)="toggleFab2()">
+						<ion-icon class="zmdi zmdi-time-restore"></ion-icon>
+						Golden Point
+					</h3>
+
+				</ion-card>
+			</div>
+			<div class="form" [ngClass]="fabAction2 ? 'active' : ''">
+				<ion-list lines="none">
+					<div class="list_header d-flex">
+						<ion-icon class="zmdi zmdi-navigation"></ion-icon>
+						<p>2210 St. Merry Church, New York, NY 10013, United States</p>
+					</div>
+					<ion-item lines="none">
+						<ion-icon class="zmdi zmdi-pin-assistant ion-text-start" slot="start"></ion-icon>
+						<ion-input type="text" value="" placeholder="{{'enter_landmark' | translate}}"></ion-input>
+					</ion-item>
+					<ion-item lines="none">
+						<ion-icon class="zmdi zmdi-account" slot="start"></ion-icon>
+						<ion-input type="name" value="" placeholder="{{'name_of_person' | translate}}"></ion-input>
+						<ion-icon class="zmdi zmdi-accounts-list-alt ion-text-end" slot="end"></ion-icon>
+					</ion-item>
+					<ion-item lines="none">
+						<ion-icon class="zmdi zmdi-pin-assistant ion-text-start" slot="start"></ion-icon>
+						<ion-input type="number" value="" placeholder="{{'contact_number' | translate}}"></ion-input>
+					</ion-item>
+				</ion-list>
+				<div class="btn_container d-flex">
+					<ion-button size="large" shape="round" class="btn end">
+						{{'continue' | translate}}
+						<ion-icon class="zmdi zmdi-long-arrow-down ion-text-end"></ion-icon>
+					</ion-button>
+				</div>
+			</div>
+		</div>
+		<!--	Drop Location section end -->
+
+
+		<!-- Food Info section start -->
+		<div class="content food_info" *ngSwitchCase="'food_info'">
+			<ion-list lines="none">
+				<ion-card class="form add_items">
+					<h2>{{'add_grocery_items_quantity' | translate}}</h2>
+					<ion-item lines="none">
+						<div class="item_inner d-flex">
+							<ion-icon class="zmdi zmdi-shopping-basket ion-text-start" slot="start"></ion-icon>
+							<ion-input type="name" placeholder="{{'add_item' | translate}}"></ion-input>
+							<ion-input type="number" class="ion-text-center end qnt" placeholder="{{'qnt' | translate}}"></ion-input>
+						</div>
+					</ion-item>
+					<ion-item lines="none">
+						<div class="item_inner d-flex">
+							<ion-icon class="zmdi zmdi-shopping-basket ion-text-start" slot="start"></ion-icon>
+							<ion-input type="name" placeholder="{{'add_item' | translate}}"></ion-input>
+							<ion-input type="number" class="ion-text-center end qnt" placeholder="{{'qnt' | translate}}"></ion-input>
+						</div>
+					</ion-item>
+					<ion-item lines="none">
+						<div class="item_inner d-flex">
+							<ion-icon class="zmdi zmdi-shopping-basket ion-text-start" slot="start"></ion-icon>
+							<ion-input type="name" placeholder="{{'add_item' | translate}}"></ion-input>
+							<ion-input type="number" class="ion-text-center end qnt" placeholder="{{'qnt' | translate}}"></ion-input>
+						</div>
+					</ion-item>
+					<h3>+ {{'add_more' | translate}}</h3>
+				</ion-card>
+
+				<ion-card class="form">
+					<h2>{{'additionla_information' | translate}}</h2>
+					<ion-item lines="none">
+						<ion-textarea rows="3" placeholder="{{'enter_additionla_information2' | translate}}"></ion-textarea>
+					</ion-item>
+				</ion-card>
+
+				<ion-card class="delivery_mode">
+					<h2>{{'delivery_mode' | translate}}</h2>
+					<h3 class="d-flex" (click)="deliverymode()">Economy Delivery
+						<span class="end">
+							$8.60
+							<ion-icon class="zmdi zmdi-caret-down ion-text-end"></ion-icon>
+						</span>
+					</h3>
+				</ion-card>
+
+
+				<ion-card class="delivery_info">
+					<h3 class="d-flex">
+						<ion-icon class="zmdi zmdi-assignment-alert ion-text-start"></ion-icon>
+						Will delivery which Items are available at Store.
+					</h3>
+					<h3 class="d-flex">
+						<ion-icon class="zmdi zmdi-assignment-alert ion-text-start"></ion-icon>
+						Delivery man will call to confirm total bill amount.
+					</h3>
+					<h3 class="d-flex">
+						<ion-icon class="zmdi zmdi-assignment-alert ion-text-start"></ion-icon>
+						Delivery Charges are non-refundable.
+					</h3>
+				</ion-card>
+			</ion-list>
+			<div class="btn_container d-flex">
+				<ion-button size="large" shape="round" class="btn end">
+					{{'continue' | translate}}
+					<ion-icon class="zmdi zmdi-long-arrow-down ion-text-end"></ion-icon>
+				</ion-button>
+			</div>
+		</div>
+		<!--  Food Info section end -->
+
+
+		<!-- Confirm Info section start -->
+		<div class="content confirm_info" *ngSwitchCase="'confirm'">
+			<ion-list>
+				<ion-card class="address_container">
+					<div class="address d-flex">
+						<ion-icon class="zmdi zmdi-store ion-text-start"></ion-icon>
+						<div class="text">
+							<h2>{{'grocery_store' | translate}}</h2>
+							<h3> 7-11 Grocery Mart</h3>
+							<p>128 Mott St, New York, NY 10013, United States</p>
+						</div>
+					</div>
+
+					<div class="address d-flex">
+						<ion-icon class="zmdi zmdi-navigation ion-text-start"></ion-icon>
+						<div class="text">
+							<h2>City Garden</h2>
+							<h3>Samantha Smith</h3>
+							<p>2210 St. Merry Church,New York NY 10013, United States</p>
+						</div>
+					</div>
+				</ion-card>
+				<ion-card class="distance">
+					<h2>{{'distance' | translate}}</h2>
+					<h3 class="d-flex">24.2 km
+						<span class="end">
+							<ion-icon class="zmdi zmdi-navigation ion-text-start"></ion-icon>
+							{{'view_in_map' | translate}}
+						</span>
+					</h3>
+				</ion-card>
+
+				<ion-card class="info">
+					<ion-row>
+						<ion-col size="12">
+							<h2 class="d-flex">{{'grocery_items' | translate}} <span class="end">{{'qnt' | translate}}</span></h2>
+							<h3 class="d-flex">
+								<span class="item_name">Pack of Everyday Milk</span>
+								<span class="end ion-text-end">1</span>
+							</h3>
+							<h3 class="d-flex">
+								<span class="item_name">Frozen Chicken Pack</span>
+								<span class="end ion-text-end">1</span>
+							</h3>
+							<h3 class="d-flex">
+								<span class="item_name">Coconut Oil (500ml Pack)</span>
+								<span class="end ion-text-end">1</span>
+							</h3>
+						</ion-col>
+					</ion-row>
+
+					<ion-row>
+						<ion-col size="12">
+							<h2>{{'additionla_information' | translate}}</h2>
+							<h3> Keep frozen chicken in separate Pack.</h3>
+						</ion-col>
+					</ion-row>
+				</ion-card>
+				<ion-card class="deliveryMode">
+					<h2>{{'delivery_mode' | translate}}</h2>
+					<h3 class="d-flex">Economy Delivery <span class="end">$8.60</span></h3>
+					<p>Usually delivery in 1 hour.</p>
+				</ion-card>
+			</ion-list>
+			<div class="btn_container d-flex">
+				<ion-button size="large" shape="round" class="btn end" (click)="proceed_to_payment()">
+					{{'proceed_to_payment' | translate}}
+					<ion-icon class="zmdi zmdi-long-arrow-right ion-text-end"></ion-icon>
+				</ion-button>
+			</div>
+		</div>
+		<!-- Confirm Info section end -->
+
+	</div>
+	<!--	 Tab Content end -->
+</ion-content>

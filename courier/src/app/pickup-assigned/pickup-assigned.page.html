@@ -1,0 +1,25 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>{{'pickup_assigned' | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="container ion-text-center">
+		<div class="img_box">
+			<img src="assets/images/pickup_assigned_img.png">
+		</div>
+		<h2>{{'your_pickup_has_ben_arranged' | translate}}</h2>
+		<p>{{'thank_you_for_choosing_us_for' | translate}}<br>{{'delivery_you_valuable_stuffs' | translate}}</p>
+	</div>
+</ion-content>
+<ion-footer class="ion-no-border">
+	<ion-row>
+		<ion-col size="6">
+			<ion-button size="large"  class="btn back_to_home" (click)="back_to_home()">{{'back_to_home' | translate}}</ion-button>
+		</ion-col>
+		<ion-col size="6">
+			<ion-button size="large"  class="btn track_my_courier">{{'track_my_courier' | translate}}</ion-button>
+		</ion-col>
+	</ion-row>
+</ion-footer>

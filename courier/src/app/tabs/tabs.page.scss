@@ -1,0 +1,47 @@
+ion-tabs {
+	ion-tab-bar {
+		--background: var(--white) !important;
+		box-shadow: 0 4px 41px 10px rgba(0, 0, 0, 0.1);
+
+		ion-tab-button {
+		
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				width: 0;
+				height: 0;
+				transition: all .5s;
+
+				&.before {
+					width: 27px;
+					height: 27px;
+					transition: all .5s;
+				}
+
+			}
+
+			&.tab-selected {
+				img {
+					transition: all .5s;
+
+					&.before {
+						width: 0;
+						height: 0;
+						transition: all .5s;
+					}
+
+					&.after {
+						width: 27px;
+						height: 27px;
+						transition: all .5s;
+					}
+				}
+
+			}
+		}
+	}
+}

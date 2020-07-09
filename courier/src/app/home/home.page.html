@@ -1,0 +1,208 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title></ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_transparent">
+	<ion-grid lines="none">
+		<ion-row>
+			<div class="banner">
+				<img src="assets/images/banner.png">
+			</div>
+		</ion-row>
+		
+		<ion-row class="content-padding">
+			<ion-col>
+				<ion-item class="item_shadow item-border-radius" (click)="arrange_delivery()">
+					<div class="">
+						<div class="item-image">
+							<img src="assets/images/courier.png">
+						</div>
+						<div class="">
+							<h2>{{'arrange_delivery' | translate}}</h2>
+							<p>{{'arrange_delivrey_of_anything' | translate}},<br>{{'anytime_anywhere' | translate}}</p>
+						</div>
+					</div>
+				</ion-item>
+			</ion-col>
+			<ion-col>
+				<ion-item class="item_shadow item-border-radius" (click)="search_restaurant()">
+					<div class="">
+						<div class="item-image">
+							<img src="assets/images/food.png">
+						</div>
+						<div class="">
+							<h2>{{'get_food_delivered' | translate}}</h2>
+							<p>{{'order_our_deliveryman_for_food' | translate}} <br>{{'form_any_restaurant_you_want' | translate}}</p>
+
+						</div>
+					</div>
+				</ion-item>
+			</ion-col>
+			
+		</ion-row>
+		<ion-row class="content-padding-next">
+			<ion-col>
+				<ion-item class="item_shadow item-border-radius" (click)="search_grocery_stores()">
+					<div class="">
+						<div class="item-image">
+							<img src="assets/images/grocery.png">
+						</div>
+						<div class="">
+							<h2>{{'get_grocery_delivered' | translate}}</h2>
+							<p>{{'order_our_deliveryman_for_food' | translate}} <br>{{'form_any_restaurant_you_want' | translate}}</p>
+
+						</div>
+					</div>
+				</ion-item>
+			</ion-col>
+			<ion-col>
+				<ion-item class="item_shadow item-border-radius" (click)="search_grocery_stores()">
+					<div class="">
+						<div class="item-image">
+							<img src="assets/images/medicin.png">
+						</div>
+						<div class="">
+							<h2>{{'get_medicine_delivered' | translate}}</h2>
+							<p>{{'order_our_deliveryman_for_food' | translate}} <br>{{'form_any_restaurant_you_want' | translate}}</p>
+
+						</div>
+					</div>
+				</ion-item>
+			</ion-col>
+			
+		</ion-row>
+
+		<!-- <ion-item class="item_shadow" (click)="arrange_delivery()">
+			<div class="item_inner d-flex">
+				<div class="img_box">
+					<img src="assets/images/courier.png">
+				</div>
+				<div class="text_box">
+					<h2>{{'arrange_delivery' | translate}}</h2>
+					<p>{{'arrange_delivrey_of_anything' | translate}},<br>{{'anytime_anywhere' | translate}}</p>
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item class="item_shadow" (click)="search_restaurant()">
+			<div class="item_inner d-flex">
+				<div class="img_box">
+					<img src="assets/images/food.png">
+				</div>
+				<div class="text_box">
+					<h2>{{'get_food_delivered' | translate}}</h2>
+					<p>{{'order_our_deliveryman_for_food' | translate}} <br>{{'form_any_restaurant_you_want' | translate}}</p>
+				</div>
+			</div>
+		</ion-item> -->
+
+	<!-- 	<ion-item class="item_shadow" (click)="search_grocery_stores()">
+			<div class="item_inner d-flex">
+				<div class="img_box">
+					<img src="assets/images/grocery.png">
+				</div>
+				<div class="text_box">
+					<h2>{{'get_grocery_delivered' | translate}}</h2>
+					<p>{{'order_our_deliveryman_for_food' | translate}} <br>{{'form_any_restaurant_you_want' | translate}}</p>
+				</div>
+			</div>
+		</ion-item> -->
+		<!-- <ion-item class="item_shadow" (click)="search_grocery_stores()">
+			<div class="item_inner d-flex">
+				<div class="img_box">
+					<img src="assets/images/medicin.png">
+				</div>
+				<div class="text_box">
+					<h2>{{'get_grocery_delivered' | translate}}</h2>
+					<p>{{'order_our_deliveryman_for_food' | translate}} <br>{{'form_any_restaurant_you_want' | translate}}</p>
+				</div>
+			</div>
+		</ion-item> -->
+	</ion-grid>
+
+	<div class="promotional_ads">
+		<h2>{{'promotional_ads' | translate}}</h2>
+		<div class="scroll_container">
+			<div class="item_scroll item_shadow">
+				<div class="img_box center_img">
+					<img src="assets/images/item_bg_1.png" class="crop_img">
+				</div>
+
+				<div class="text_box">
+					<h3>Orders from us <br> and get <strong>20%<br>Descounts</strong> </h3>
+					<p class="d-flex">
+						<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+						<span class="location">Yellas Fast Food</span>
+					</p>
+				</div>
+			</div>
+			<div class="item_scroll item_shadow">
+				<div class="img_box center_img">
+					<img src="assets/images/item_bg_2.png" class="crop_img">
+				</div>
+
+				<div class="text_box">
+					<h3>Orders from us <br> and We'll pay <br> delivery Charge</h3>
+					<p class="d-flex">
+						<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+						<span class="location">City Grocery Store</span>
+					</p>
+				</div>
+			</div>
+			<div class="item_scroll item_shadow">
+				<div class="img_box center_img">
+					<img src="assets/images/item_bg_1.png" class="crop_img">
+				</div>
+
+				<div class="text_box">
+					<h3>Orders from us <br> and get <strong>20%<br>Descounts</strong> </h3>
+					<p class="d-flex">
+						<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+						<span class="location">Yellas Fast Food</span>
+					</p>
+				</div>
+			</div>
+			<div class="item_scroll item_shadow">
+				<div class="img_box center_img">
+					<img src="assets/images/item_bg_2.png" class="crop_img">
+				</div>
+
+				<div class="text_box">
+					<h3>Orders from us <br> and We'll pay <br> delivery Charge</h3>
+					<p class="d-flex">
+						<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+						<span class="location">City Grocery Store</span>
+					</p>
+				</div>
+			</div>
+			<div class="item_scroll item_shadow">
+				<div class="img_box center_img">
+					<img src="assets/images/item_bg_1.png" class="crop_img">
+				</div>
+
+				<div class="text_box">
+					<h3>Orders from us <br> and get <strong>20%<br>Descounts</strong> </h3>
+					<p class="d-flex">
+						<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+						<span class="location">Yellas Fast Food</span>
+					</p>
+				</div>
+			</div>
+			<div class="item_scroll item_shadow">
+				<div class="img_box center_img">
+					<img src="assets/images/item_bg_2.png" class="crop_img">
+				</div>
+
+				<div class="text_box">
+					<h3>Orders from us <br> and We'll pay <br> delivery Charge</h3>
+					<p class="d-flex">
+						<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+						<span class="location">City Grocery Store</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</ion-content>

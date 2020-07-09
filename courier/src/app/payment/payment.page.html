@@ -1,0 +1,48 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{'payment_modes' | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list lines="none">
+		<h2>{{'amount_to_pay' | translate}} $8.60</h2>
+		<ion-radio-group>
+			<ion-item>
+				<ion-label>
+					<h3>{{'cash_on_pickup' | translate}}</h3>
+					<h4>{{'pay_while_pick_a_pickup' | translate}}</h4>
+				</ion-label>
+				<ion-radio slot="start" value="cop"></ion-radio>
+			</ion-item>
+			<ion-item>
+				<ion-label>
+					<h3>{{'cash_on_delivery' | translate}}</h3>
+					<h4>{{'pay_while_drop_a_delivery' | translate}}</h4>
+				</ion-label>
+				<ion-radio slot="start" value="cod"></ion-radio>
+			</ion-item>
+			<ion-item>
+				<ion-label>
+					<h3>{{'pay_pal' | translate}}</h3>
+					<h4>{{'pay_from_pay_pal_account' | translate}}</h4>
+				</ion-label>
+				<ion-radio slot="start" value="pay_pal"></ion-radio>
+			</ion-item>
+			<ion-item>
+				<ion-label>
+					<h3>{{'stripe' | translate}}</h3>
+					<h4>{{'pay_from_stripe_account' | translate}}</h4>
+				</ion-label>
+				<ion-radio slot="start" value="stripe"></ion-radio>
+			</ion-item>
+		</ion-radio-group>
+	</ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+	<ion-button size="large"  class="btn" (click)="pickup_assigned()">{{'done' | translate}}</ion-button>
+</ion-footer>
